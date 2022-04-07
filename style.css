@@ -31,23 +31,60 @@
   flex-direction: column;
   background: var(--Very-dark-blue-card);
 }
-.card .imagem{
+.imagem{
   width: 100%;
   height: 60%;
   margin-bottom: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
 }
-.card .imagem img{
+.imagem img:nth-child(1){
   width: 100%;
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
+.imagem .view{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Cyan);
+  opacity: .3;
+  visibility: hidden;
+}
+.imagem:hover > .view{
+  visibility: visible;
+}
+.imagem > #view{
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  top: 42%;
+  left: 42%;
+  visibility: hidden;
+}
+.imagem:hover > #view{
+  visibility: visible;
+}
+
 .title{
   margin-bottom: 1rem;  
 }
 .title h1{
   font-size:1.125rem;
   color: var(--White);
+  cursor: pointer;
+  transition: .3s;
+}
+.title h1:hover{
+  color: var(--Cyan);
 }
 .texto{
   margin-bottom: 1rem;
@@ -90,11 +127,16 @@
   font-size: .8rem;
   gap: .8rem;
 }
-.perfil-conteudo span{
+.perfil-conteudo p{
   color: var(--Soft-blue);
 }
-.perfil-conteudo p{
+.perfil-conteudo span{
   color: var(--White);
+  cursor: pointer;
+  transition: .3s;
+}
+.perfil-conteudo span:hover{
+  color: var(--Cyan);
 }
 .perfil-conteudo img{
   width: 25px;
